@@ -3,11 +3,12 @@ import { Pokemon } from './../../modelo/pokemons';
 import { Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [MatCardModule,MatButtonModule],
+  imports: [MatCardModule,MatButtonModule,NgFor],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css'
 })

@@ -1,0 +1,86 @@
+.example-card {
+    max-width: 600px;
+    background-color: rgb(161, 160, 160);
+    margin: 20px; /* Agrega un espacio alrededor de la tarjeta */
+    box-shadow: 4px 4px 4px black;
+    width:500px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  #nombre{
+    text-align: center;
+    font-size: xx-large;
+    margin: 0px auto;
+  }
+  .centered {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .foto{
+    max-width: 100%; /* Ajusta la imagen al ancho máximo del contenedor */
+    height: 200px; /* Ajusta la altura automáticamente */
+  }
+  .list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list {
+    margin-right: 20px; /* Ajusta el margen entre las listas según sea necesario */
+  }
+  
+  ul {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px; /* Ajusta el margen entre elementos de la lista según sea necesario */
+  }
+  .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boton {
+    margin: 0 10px; /* Espacio entre los botones */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde */
+    border-radius: 4px; /* Borde redondeado */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  .shiny-button {
+    background-color: #ffca28; /* Color de fondo */
+  }
+  
+  .shiny-button:hover {
+    background-color: #ffb300; /* Color de fondo al pasar el cursor */
+  }
+  
+  .back-button {
+    background-color: #757575; /* Color de fondo */
+  }
+  
+  .back-button:hover {
+    background-color: #616161; /* Color de fondo al pasar el cursor */
+  }
+  .spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 100px; /* Tamaño completo de la pantalla */
+    margin-top: 25px;
+  }
+  

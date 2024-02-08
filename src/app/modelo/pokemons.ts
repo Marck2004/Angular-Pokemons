@@ -1,25 +1,22 @@
+import { NumberSymbol } from "@angular/common";
+
 export class Pokemon{
-  count:number;
-  next:String;
-  previous:null;
+  index:number;
   results:[
     {
       name:String;
       url:String;
     }
   ]
-  constructor(count:number,
-    next:String,
-    previous:null,
+  constructor(
+    index:number,
     results:[
       {
         name:String,
         url:String,
       }
     ]){
-      this.count = count;
-      this.next = next;
-      this.previous = previous;
+      this.index=index;
       this.results = results;
     }
 }

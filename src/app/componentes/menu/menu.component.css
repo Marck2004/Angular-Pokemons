@@ -1,0 +1,13 @@
+.center-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    margin-bottom: 50px; /* Centra verticalmente */ /* Establece la altura al 100% del viewport */
+    margin-top: 50px;
+  }
+  .links {
+    text-decoration: none; /* Quitar el subrayado */
+    color: inherit; /* Heredar el color del texto */
+    cursor: pointer; /* Cambiar el cursor al puntero */
+    font-family:  sans-serif;
+  }

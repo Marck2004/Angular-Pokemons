@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .mat-table-button {
+    background-color: gray; /* Color de fondo */
+    border: none; /* Quita el borde */
+    color: white; /* Color del texto */
+    padding: 8px 16px; /* Añade relleno */
+    text-align: center; /* Alinea el texto al centro */
+    text-decoration: none; /* Quita el subrayado del texto */
+    display: inline-block; /* Hace que el botón sea un elemento en línea */
+    font-size: 14px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px; /* Añade bordes redondeados */
+    transition-duration: 0.4s; /* Duración de la transición */
+  }
+  
+  .mat-table-button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+  }

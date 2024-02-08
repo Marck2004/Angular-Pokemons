@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+
+@if (loading) {
+    <div class="spinner">
+    
+    <app-spinner></app-spinner>
+    </div>
+}@else {
+<div class="card-container">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div *ngIf="estats && estats.species && estats.species.name" class="centered">
+      <mat-card-title ><p id="nombre">{{estats.species.name}}</p></mat-card-title>
+    </div>
+    </mat-card-header>
+    <div *ngIf="img" class="centered">
+    <img mat-card-image [src]="img" alt="Photo of a Shiba Inu" class="foto">
+    </div>
+    <mat-card-content>
+        <div class="list-container">
+        <div *ngIf="estats && estats.abilities" class="list">
+            <h2>Habilidades</h2>
+      <ul>
+            <b><li *ngFor="let habilidad of estats.abilities">{{habilidad.ability.name}}</li></b>
+      </ul>
+    </div>
+
+    <div *ngIf="estats && estats.types" class="list">
+      <h2>Tipos</h2>
+      <ul>
+            <b><li *ngFor="let habilidad of estats.types">{{habilidad.type.name}}</li></b>
+      </ul>
+
+    </div>
+</div>
+    </mat-card-content>
+    <mat-card-actions class="botones">
+      <button mat-button (click)="convertirShiny()" class="boton shiny-button">Shiny</button>
+      <button mat-button class="boton back-button" (click)="volverAtras()">Atras</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+}

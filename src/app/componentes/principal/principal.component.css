@@ -1,0 +1,29 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  mat-grid-list {
+    width: 80%;
+  }
+  .container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Evitar el scroll */
+  }
+  #titulo{
+    text-align: center;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* Estilos para los enlaces */
+  .links {
+    text-decoration: none; /* Quitar el subrayado */
+    color: inherit; /* Heredar el color del texto */
+    cursor: pointer; /* Cambiar el cursor al puntero */
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }

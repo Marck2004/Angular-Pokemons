@@ -1,0 +1,6 @@
+<app-menu></app-menu>
+<mat-tab-group *ngFor="let regiones of arrRegiones;let i = index"  (click)="traerPokemons(regiones.name)">
+    <mat-tab [label]="regiones.name">
+    
+    </mat-tab>
+  </mat-tab-group>

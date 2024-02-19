@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { regiones } from '../../servicios/regiones';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MenuComponent } from '../menu/menu.component';
 import { NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
+import { servicioApi } from '../../servicios/servicioApis';
 
 @Component({
   selector: 'app-regions',
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class RegionsComponent {
   arrRegiones?:any;
 
-  constructor(private regiones:regiones,
+  constructor(private regiones:servicioApi,
     private router:Router){}
 
   ngOnInit(){

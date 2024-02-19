@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { estadisticas } from '../../servicios/estadisticas';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MenuComponent } from '../menu/menu.component';
 import { NgFor, NgIf } from '@angular/common';
 import { Location } from '@angular/common';
 import { SpinnerComponent } from '../spinner/spinner.component';
+import { servicioApi } from '../../servicios/servicioApis';
 
 @Component({
   selector: 'app-estadisticas',
@@ -22,7 +22,7 @@ export class EstadisticasComponent implements OnInit{
   loading:boolean = true;
 
   constructor(private router: ActivatedRoute,
-    private estadisticaPokemon:estadisticas,
+    private estadisticaPokemon:servicioApi,
     private location:Location){}
 
   ngOnInit(): void {
@@ -37,7 +37,7 @@ export class EstadisticasComponent implements OnInit{
         this.img = datos.sprites.front_default;
         this.loading = false;
       });
-      
+
     })
   }
   convertirShiny(){

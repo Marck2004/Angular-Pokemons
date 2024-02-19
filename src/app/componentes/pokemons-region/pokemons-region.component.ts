@@ -2,7 +2,7 @@ import { Component,ViewChild,AfterViewInit } from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
-import { regiones } from '../../servicios/regiones';
+import { servicioApi } from '../../servicios/servicioApis';
 
 @Component({
   selector: 'app-pokemons-region',
@@ -16,7 +16,7 @@ export class PokemonsRegionComponent implements AfterViewInit{
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  constructor(private router:ActivatedRoute,private regionesServicio:regiones){
+  constructor(private router:ActivatedRoute,private regionesServicio:servicioApi){
 
   }
 
@@ -28,13 +28,13 @@ export class PokemonsRegionComponent implements AfterViewInit{
   }
   mostrarPokemons(){
     console.log("Entramos a la funcion");
-    
+
     this.router.params.subscribe(parametros=>{
       const nombreRegion = parametros['name'];
-      
+
       this.regionesServicio.devolverPokemon(nombreRegion).then((datos:any)=>{
         console.log(datos);
-        
+
       })
     })
   }

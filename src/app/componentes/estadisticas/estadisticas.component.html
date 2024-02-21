@@ -9,26 +9,24 @@
 <div class="card-container">
 <mat-card class="example-card">
     <mat-card-header>
-      <div *ngIf="estats && estats.species && estats.species.name" class="centered">
-      <mat-card-title ><p id="nombre">{{estats.species.name}}</p></mat-card-title>
-    </div>
+      <mat-card-title ><p id="nombre">{{this.detallePokemon?.species?.name}}</p></mat-card-title>
     </mat-card-header>
     <div *ngIf="img" class="centered">
     <img mat-card-image [src]="img" alt="Photo of a Shiba Inu" class="foto">
     </div>
     <mat-card-content>
         <div class="list-container">
-        <div *ngIf="estats && estats.abilities" class="list">
+        <div class="list">
             <h2>Habilidades</h2>
       <ul>
-            <b><li *ngFor="let habilidad of estats.abilities">{{habilidad.ability.name}}</li></b>
+            <b><li *ngFor="let habilidades of this.detallePokemon?.abilities">{{habilidades.ability.name}}</li></b>
       </ul>
     </div>
 
-    <div *ngIf="estats && estats.types" class="list">
+    <div class="list">
       <h2>Tipos</h2>
       <ul>
-            <b><li *ngFor="let habilidad of estats.types">{{habilidad.type.name}}</li></b>
+            <b><li *ngFor="let tipos of this.detallePokemon?.types">{{tipos.type.name}}</li></b>
       </ul>
 
     </div>

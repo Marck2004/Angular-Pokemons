@@ -27,8 +27,6 @@ export class PokemonsRegionComponent implements AfterViewInit{
     this.mostrarPokemons();
   }
   mostrarPokemons(){
-    console.log("Entramos a la funcion");
-
     this.router.params.subscribe(parametros=>{
       const nombreRegion = parametros['name'];
 

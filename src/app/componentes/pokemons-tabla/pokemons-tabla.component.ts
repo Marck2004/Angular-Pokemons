@@ -60,7 +60,6 @@ export class PokemonsTablaComponent implements AfterViewInit{
       if (this.paginator) {
         this.dataSource.paginator = this.paginator;
       }
-      console.log(this.pokemons);
     });
   }
   announceSortChange(sortState: Sort) {

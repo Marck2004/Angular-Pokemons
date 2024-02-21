@@ -7,6 +7,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Location } from '@angular/common';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { servicioApi } from '../../servicios/servicioApis';
+import { pokemonEstadistica } from '../../modelo/pokemonEstadistica';
 
 @Component({
   selector: 'app-estadisticas',
@@ -16,6 +17,7 @@ import { servicioApi } from '../../servicios/servicioApis';
   styleUrl: './estadisticas.component.css'
 })
 export class EstadisticasComponent implements OnInit{
+  detallePokemon?:pokemonEstadistica;
   id?: number;
   estats?: any;
   img?:String;
@@ -33,7 +35,10 @@ export class EstadisticasComponent implements OnInit{
       this.id = +parametros['id'];
       this.estadisticaPokemon.estadisticasPokemon(this.id).then((datos:any)=>{
         this.estats = datos;
+        this.detallePokemon = datos;
         console.log(this.estats);
+        console.log(this.detallePokemon?.types[0].type.name);
+        
         this.img = datos.sprites.front_default;
         this.loading = false;
       });
